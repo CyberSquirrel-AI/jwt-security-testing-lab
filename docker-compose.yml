@@ -1,0 +1,10 @@
+services:
+  api:
+    build: ./api
+    ports: ["8080:8080"]
+    environment:
+      - JWT_ISS=https://issuer.example
+      - JWT_AUD=https://api.example
+      - JWT_HS_SECRET=use-a-long-random-secret-and-store-secret-in-vault
+    volumes:
+      - ./scripts:/app/scripts

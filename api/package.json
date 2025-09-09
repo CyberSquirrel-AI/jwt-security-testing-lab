@@ -1,0 +1,9 @@
+{
+  "name": "jwt-security-testing-lab",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "jose": "^5.9.3"
+  }
+}
