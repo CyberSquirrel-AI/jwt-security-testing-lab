@@ -34,7 +34,7 @@ export JWT_ISS=https://issuer.example
 export JWT_AUD=https://api.example
 export JWT_HS_SECRET=use-a-long-random-secret-and-store-secret-in-vault
 
-node scripts/make-tokens.mjs > tokens.txt
+docker compose exec -T api node scripts/make-tokens.mjs > tokens.txt
 ```
 
 Open `tokens.txt`, copy each token after `Bearer `, and call the endpoint:
@@ -68,5 +68,14 @@ chmod +x test-tokens.sh
 - Never paste secrets or production tokens into public tools.
 - Only test systems you own or are authorized to assess.
 
+## Attribution
+
+*Ideas are mine but rephrased and edited using AI.*
+
+## 📌 Disclaimer
+
+> This is intended for **learning**. Misuse against environments you don't own or operate is illegal and unethical.
+
 ## License
-MIT
+
+MIT License
